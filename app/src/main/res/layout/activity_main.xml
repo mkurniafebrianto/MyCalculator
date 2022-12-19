@@ -1,18 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="30dp"
     tools:context=".MainActivity">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculator"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="30dp" />
+
+    <EditText
+        android:id="@+id/first_number_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="first number"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/second_number_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="second number"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_plus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="2dp" />
+
+        <Button
+            android:id="@+id/btn_minus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="2dp" />
+
+        <Button
+            android:id="@+id/btn_multiple"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="2dp" />
+
+        <Button
+            android:id="@+id/btn_div"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="2dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:text="Result"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
